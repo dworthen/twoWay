@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example</title>
+	<script type="text/javascript" src="../build/build.js"></script>
+</head>
+<body>
+	
+	<h1 class="title"></h1>
+	<h2 data-bind-title class="title"></h2>
+	<input type="text" data-bind-title />
+	<p data-bind-description></p>
+	<p data-bind-name></p>
+
+	<script>
+
+		var componentModel = require('data-binding/compModel.js');
+		var dom = require('component-dom');
+
+		var html = '<p>Hello</p><p>World</p>';
+
+		dom(html).forEach(function(el, i) {
+			console.log(el);	
+		});
+
+		var Db = require('data-binding')
+			, model = require('component-model/lib/index.js')
+			, data = {
+					title: 'Website',
+					description: 'cool',
+					name: 'Derek'
+				}
+			, conf = {
+					attr: 'class',
+					equal: true,
+					prefix: false
+				}
+			, Post = model('Post').attr('name')
+			, post = new Post({name: 'cool'})
+			, db = new Db(undefined);
+		db.bind(html, data, function(err, results) {
+			// console.log(results);
+			dom('body', document).append(results);
+			// console.log(dom('body', document));
+		});	
+
+		// Db.test();
+
+	</script>
+</body>
+</html>

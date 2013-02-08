@@ -1,0 +1,31 @@
+{
+  "name": "data-binding",
+  "repo": "dworthen/data-binding",
+  "description": "two way data-binding",
+  "version": "0.0.1",
+  "keywords": [
+    "data",
+    "binding"
+  ],
+  "dependencies": {
+    "component/inherit": "*",
+    "component/dom": "*",
+    "component/emitter": "*",
+    "timoxley/react": "*",
+    "component/object": "*",
+    "component/map": "*",
+    "component/clone": "*",
+    "matthewp/text": "*",
+    "component/type": "*",
+    "component/select": "*",
+    "component/model": "*",
+    "yields/isArray": "*",
+    "matthewp/fs": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js",
+    "compModel.js"
+  ]
+}
